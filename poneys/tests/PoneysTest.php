@@ -8,6 +8,13 @@ require_once 'src/Poneys.php';
  */
 class PoneysTest extends TestCase
 {
+    protected $Poneys;
+    protected function setUp(){
+        $this->Poneys = new Poneys();
+        $this->Poneys->setCount(10); 
+    }
+
+
     /**
      * Undocumented function
      * 
@@ -15,14 +22,12 @@ class PoneysTest extends TestCase
      */
     public function testRemovePoneyFromField()
     {
-        // Setup
-        $Poneys = new Poneys();
 
         // Action
-        $Poneys->removePoneyFromField(3);
+        $this->Poneys->removePoneyFromField(3);
 
         // Assert
-        $this->assertEquals(5, $Poneys->getCount());
+        $this->assertEquals(7, $this->Poneys->getCount());
     }
     
     /**
@@ -32,14 +37,12 @@ class PoneysTest extends TestCase
      */
     public function testAddPoneyFromField()
     {
-        // Setup
-        $Poneys = new Poneys();
 
         // Action
-        $Poneys->addPoneyFromField(2);
+        $this->Poneys->addPoneyFromField(2);
 
         // Assert
-        $this->assertEquals(10, $Poneys->getCount());
+        $this->assertEquals(12, $this->Poneys->getCount());
     }
 
     /**
@@ -47,12 +50,10 @@ class PoneysTest extends TestCase
      * @return void
      */
     public function testremove2poneyFromField()
-    {
-        // Setup
-        $Poneys = new Poneys();
+    {       
         $this->expectExceptionMessage('error number negatif');
         // Action
-        $Poneys->removePoneyFromField(-2);
+        $this->Poneys->removePoneyFromField(-2);
 
     }
 
@@ -63,16 +64,15 @@ class PoneysTest extends TestCase
      */
     public function testremoveproviderponeyFromField($a,$b)
     {
-        // Setup
-        $Poneys = new Poneys();
+      
         // Action
-        $Poneys->removePoneyFromField($a);
-        $this->assertEquals($b, $Poneys->getCount());
+        $this->Poneys->removePoneyFromField($a);
+        $this->assertEquals($b, $this->Poneys->getCount());
 
     }
 
     public function additionProvider(){
-        return [[1,7],[2,6]];
+        return [[1,9],[2,8]];
     }
 
     public function teststubPoneyname(){
@@ -85,7 +85,9 @@ class PoneysTest extends TestCase
     }
 
    public function testdisponible(){
-       $this->assertTrue($poney->isFull());
+       
+        $this->Poneys->addPoneyFromField(1);
+        $this->assertTrue($this->Poneys->isFull());
    }
 
 

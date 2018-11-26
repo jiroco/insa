@@ -4,7 +4,7 @@
  */
 class Poneys
 {
-    private $_count = 8;
+    
 
     /**
      * Retourne le nombre de poneys
@@ -14,6 +14,13 @@ class Poneys
     public function getCount(): int
     {
         return $this->_count;
+    }
+
+
+
+    public function setCount(int $number): void
+    {
+        $this->_count= $number;
     }
 
     /**
@@ -55,7 +62,7 @@ class Poneys
     }
 
     public function isFull(){
-        if($this->_count<15){
+        if($this->_count<=15){
             return true;
         }else{
             return false;
