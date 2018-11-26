@@ -62,7 +62,7 @@ class Poneys
     }
 
     public function isFull(){
-        if($this->_count<=15){
+        if($this->_count<=CHAMP){
             return true;
         }else{
             return false;

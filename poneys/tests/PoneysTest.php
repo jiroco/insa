@@ -11,7 +11,7 @@ class PoneysTest extends TestCase
     protected $Poneys;
     protected function setUp(){
         $this->Poneys = new Poneys();
-        $this->Poneys->setCount(10); 
+        $this->Poneys->setCount(NBPONEY); 
     }
 
     /**
