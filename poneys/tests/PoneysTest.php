@@ -14,7 +14,6 @@ class PoneysTest extends TestCase
         $this->Poneys->setCount(10); 
     }
 
-
     /**
      * Undocumented function
      * 
@@ -90,7 +89,10 @@ class PoneysTest extends TestCase
         $this->assertTrue($this->Poneys->isFull());
    }
 
-
+   protected function tearDown()
+   {
+       flush($this->Poneys);
+   }
 
 }
 ?>
