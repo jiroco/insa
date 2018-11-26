@@ -84,7 +84,9 @@ class PoneysTest extends TestCase
 
     }
 
-   
+   public function testdisponible(){
+       $this->assertTrue($poney->isFull());
+   }
 
 
 

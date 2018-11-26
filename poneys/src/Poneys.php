@@ -54,6 +54,13 @@ class Poneys
         $this->_count += $number;
     }
 
+    public function isFull(){
+        if($this->_count<15){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
 
