@@ -10,7 +10,7 @@ class PoneysTest extends TestCase
 {
     /**
      * Undocumented function
-     *
+     * 
      * @return void
      */
     public function testRemovePoneyFromField()
@@ -24,5 +24,46 @@ class PoneysTest extends TestCase
         // Assert
         $this->assertEquals(5, $Poneys->getCount());
     }
+    
+    /**
+     * Undocumented function
+     * 
+     * @return void
+     */
+    public function testAddPoneyFromField()
+    {
+        // Setup
+        $Poneys = new Poneys();
+
+        // Action
+        $Poneys->addPoneyFromField(2);
+
+        // Assert
+        $this->assertEquals(10, $Poneys->getCount());
+    }
+
+    /**
+     * Undocumented function
+     * @dataprovider additionProvider
+     * @return void
+     */
+    public function testremove2poneyFromField()
+    {
+        // Setup
+        $Poneys = new Poneys();
+        $this->expectExceptionMessage('error number negatif');
+        // Action
+        $Poneys->removePoneyFromField(-2);
+
+    }
+
+    public function additionProvider(){
+        return array(1,2,-2);
+    }
+
+   
+
+
+
 }
 ?>
