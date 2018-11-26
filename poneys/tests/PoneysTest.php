@@ -75,6 +75,15 @@ class PoneysTest extends TestCase
         return [[1,7],[2,6]];
     }
 
+    public function teststubPoneyname(){
+        $stub=$this->createMock(Poneys::class);
+        $stub->method('getNames')
+             ->willReturn(['toto','tata','titi']);
+        
+        $this->assertSame(['toto','tata','titi'], $stub->getNames());
+
+    }
+
    
 
 
