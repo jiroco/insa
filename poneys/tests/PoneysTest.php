@@ -91,7 +91,7 @@ class PoneysTest extends TestCase
 
    protected function tearDown()
    {
-       flush($this->Poneys);
+       unset($this->Poneys);
    }
 
 }
