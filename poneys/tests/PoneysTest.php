@@ -44,7 +44,6 @@ class PoneysTest extends TestCase
 
     /**
      * Undocumented function
-     * @dataprovider additionProvider
      * @return void
      */
     public function testremove2poneyFromField()
@@ -57,8 +56,23 @@ class PoneysTest extends TestCase
 
     }
 
+    /**
+     * Undocumented function
+     * @dataProvider additionProvider
+     * @return void
+     */
+    public function testremoveproviderponeyFromField($a,$b)
+    {
+        // Setup
+        $Poneys = new Poneys();
+        // Action
+        $Poneys->removePoneyFromField($a);
+        $this->assertEquals($b, $Poneys->getCount());
+
+    }
+
     public function additionProvider(){
-        return array(1,2,-2);
+        return [[1,7],[2,6]];
     }
 
    
