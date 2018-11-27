@@ -1,4 +1,10 @@
-<phpunit verbose="true" forceCoversAnnotation="true" beStrictAboutTodoAnnotatedTests="true" beStrictAboutTestsThatDoNotTestAnything="true" beStrictAboutOutputDuringTests="true" beStrictAboutCoversAnnotation="true" backupStaticAttributes="false" backupGlobals="false" bootstrap="../src/autoload.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.2/phpunit.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<phpunit verbose="true" 
+forceCoversAnnotation="true" 
+beStrictAboutTodoAnnotatedTests="true" 
+beStrictAboutTestsThatDoNotTestAnything="true" 
+beStrictAboutOutputDuringTests="true" beStrictAboutCoversAnnotation="true" 
+backupStaticAttributes="false" backupGlobals="false"
+xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.2/phpunit.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <php>
         <const name="CHAMP" value="50"/>
