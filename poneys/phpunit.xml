@@ -3,9 +3,7 @@
         <const name="CHAMP" value="50"/>
         <const name="NBPONEY" value="10"/>
     </php>
-    <logging>
-        <log target="logs/junit.xml" type="junit"/>
-    </logging>
+    
     <testsuites>
         <testsuite name="poney">
             <file>tests/PoneysTest.php</file>
@@ -14,4 +12,7 @@
             <file>tests/OtherTest.php</file>
         </testsuite>
     </testsuites>
+    <logging>
+        <log target="logs/junit.xml" type="junit"/>
+    </logging>
 </phpunit>
