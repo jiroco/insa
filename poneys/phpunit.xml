@@ -20,6 +20,6 @@ xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.2/phpunit.xsd" xmlns:
         </testsuite>
     </testsuites>
     <logging>
-        <log target="logs.junit.xml" type="junit"/>
+        <log target="./logs/junit.xml" type="junit"/>
     </logging>
 </phpunit>
